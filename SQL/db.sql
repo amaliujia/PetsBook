@@ -6,6 +6,12 @@ CREATE TABLE User_reg (
 	password CHAR(50) NOT NULL
 	petname CHAR(20) NOT NULL,
 	)
+	
+CREATE TABLE User_address (
+	uid INTEGER NOT NULL PRIMARY KEY,
+	address CHAR(50) NOT NULL,
+	FOREIGN KEY (uid) REFERENCES User_reg(uid),
+)
 
  CREATE TABLE Follow (
  	followee INTEGER NOT NULL,
